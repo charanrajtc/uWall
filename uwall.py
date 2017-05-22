@@ -7,12 +7,13 @@ from gi.repository import Gio
 import os
 import sys
 
-# change this url according to your requirment 
+# change this url according to your requirment
 UNSPLASH_URL = 'https://source.unsplash.com/random/1600x900'
 
 UNSPLASH_WALL_NAME = 'unslpashDesktopWp.jpeg'
-USER_HOME_DIR= os.getenv('HOME')
-FULL_PATH_DESKTOP_IMG=USER_HOME_DIR + '/' +UNSPLASH_WALL_NAME
+USER_HOME_DIR = os.getenv('HOME')
+FULL_PATH_DESKTOP_IMG = USER_HOME_DIR + '/' + UNSPLASH_WALL_NAME
+
 
 def gsettings_set(schema, path, key, value):
     """Set value of gsettings schema"""
