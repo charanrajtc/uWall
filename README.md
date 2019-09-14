@@ -17,7 +17,7 @@ Installation instructions...
 
 Usage instructions...
 
-1. `python uwall.py` to execute it to change the random wallpaper 
+1. `python2 uwall.py` to execute it to change the random wallpaper 
 2. you can change the unsplash url by below documentaion [here](https://source.unsplash.com/) 
 
 ## Contributing
