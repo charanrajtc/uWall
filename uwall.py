@@ -1,16 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Simple scirpt to change wallpaper form unsplash
 """
-import urllib2
+import urllib.request
 from gi.repository import Gio
 import os
 import sys
 from os.path import expanduser
 
-home = expanduser("~")
-UNSPLASH_WALL_NAME = home + '/.config/uwall/unslpashWallPaper.jpeg'
-UNSPLASH_URL = 'https://source.unsplash.com/random/1600x900'
+UNSPLASH_WALL_NAME = 'unslpashWallPaper.jpeg'
+UNSPLASH_URL = 'https://source.unsplash.com/random/3440x1440'
 
 def ensure_dir(file_path):
     directory = os.path.dirname(file_path)
@@ -39,7 +38,7 @@ def error_and_exit(message):
 
 def get_new_wallpaper():
     try:
-        tmp_url_file = urllib2.urlopen(UNSPLASH_URL)
+        tmp_url_file = urllib.request.urlopen(UNSPLASH_URL)
         tmp_file_data = tmp_url_file.read()
         ensure_dir(UNSPLASH_WALL_NAME)
         with open(UNSPLASH_WALL_NAME, "wb") as tmp_file:
