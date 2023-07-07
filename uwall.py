@@ -40,7 +40,6 @@ def get_new_wallpaper():
     try:
         tmp_url_file = urllib.request.urlopen(UNSPLASH_URL)
         tmp_file_data = tmp_url_file.read()
-        ensure_dir(UNSPLASH_WALL_NAME)
         with open(UNSPLASH_WALL_NAME, "wb") as tmp_file:
             tmp_file.write(tmp_file_data)
         return True
